@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center_horizontal"
+    tools:context="com.example.luxstopwatch.MainActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="Lux-Stoppuhr"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:id="@+id/stopwatchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⏱ Laufzeit: 0:00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/luxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💡 Lux: 0.00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/minLuxInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Minimale Lux-Zahl"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/startStopButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:backgroundTint="#8000FF"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/exportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CSV exportieren"
+        android:backgroundTint="#8000FF"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Messungen:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <ListView
+        android:id="@+id/measurementList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>
